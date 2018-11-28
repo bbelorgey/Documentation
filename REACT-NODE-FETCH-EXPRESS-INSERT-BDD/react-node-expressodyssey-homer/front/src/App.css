@@ -1,0 +1,10 @@
+.App {
+  text-align: center;
+}
+
+label {
+  padding-right: 10px;
+}
+input {
+  margin-top: 10px;
+}
