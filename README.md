@@ -12,3 +12,12 @@ EXEMPLE react-node-expressodyssey-homer
   - Dossier back : app.js : express requet GET
                    PORT 5000
                    auth.js : router pour requete POST
+
+
+Exemple react-redux mise en place de redux pour gestion du state dans react
+
+  - index.js    : imports et Composants <Provider>, etc
+    Dossiers  containers - recup du state dans props
+              actions     - declaration des actions
+              reducers   - gestion du state dans le store
+              components  - gestion des Composants
