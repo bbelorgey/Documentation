@@ -14,10 +14,10 @@ EXEMPLE react-node-expressodyssey-homer
                    auth.js : router pour requete POST
 
 
-Exemple react-redux mise en place de redux pour gestion du state dans react
+EXEMPLE react-redux mise en place de redux pour gestion du state dans react
 
   - index.js    : imports et Composants <Provider>, etc
     Dossiers  containers - recup du state dans props
               actions     - declaration des actions
-              reducers   - gestion du state dans le store
+              reducers   - definition et gestion du state dans le store
               components  - gestion des Composants
