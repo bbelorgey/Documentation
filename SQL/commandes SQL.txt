@@ -1,0 +1,21 @@
+sudo service nginx stop // stoppe nginx
+sudo /etc/init.d/apache2 restart  //restart apache2
+ http://localhost/phpmyadmin  //interface phpmyadmin
+ A partir terminal via Lamp : mysql -u root -p donne prompt > mysql
+
+environnement BACK
+npm install express body-parser mysql
+MODIFS sans redemarrer
+npm install nodemon
+
+Création d'une base mySQL
+sudo apt-get install mysql
+
+ stop/start/restart mysql avec l'aide de l'outils serviced'ubuntu.
+sudo service mysql stop
+sudo service mysql start
+sudo service mysql restart
+
+connecteur mysql pour Nodejs.
+npm install --save mysql
+

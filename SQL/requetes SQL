@@ -1,0 +1,29 @@
+SELECT * FROM students WHERE IsActive
+
+SELECT MIN(age) age_min, MAX(age) age_max FROM people;
+
+select sum(age) as age_sum from people
+
+SELECT name,age FROM users WHERE age>=18;
+SELECT * FROM participants;
+
+SELECT id, LOWER(prenom) AS prenom_lower, LOWER(nom) AS nom_lower, ville FROM utilisateur
+SELECT id, name, birthday, LOWER(race) as race FROM demographics;
+
+SELECT * FROM utilisateur ORDER BY nom, date_inscription DESC
+SELECT * FROM companies ORDER BY employees DESC
+
+SELECT MOD(number1,number2) as mod FROM decimals;
+SELECT FLOOR(number1) as number1,CEILING(number2) as number2 FROM decimals;
+
+//////////// JOIN
+SELECT products.*, companies.name as company_name FROM products 
+inner join companies ON companies.id=products.company_id
+
+SELECT age,COUNT(*) as people_count FROM people GROUP BY age
+
+SELECT people.*, count(toys.*) as toy_count FROM people 
+inner join toys ON people.id=toys.people_id 
+GROUP BY people.id
+
+INSERT INTO participants VALUES ('name', 21, true);
