@@ -1,6 +1,6 @@
 Dossier REACT-NODE-FETCH-EXPRESS-INSERT-BDD
 
-EXEMPLE react-node-expressodyssey-homer
+EXEMPLE full/stack/react-node-expressodyssey-homer
 
   - Dossier Front
     Appli react  : Composant SignUp : envoi d'un formulaire
@@ -21,3 +21,12 @@ EXEMPLE react-redux mise en place de redux pour gestion du state dans react
               actions     - declaration des actions
               reducers   - definition et gestion du state dans le store
               components  - gestion des Composants
+
+EXEMPLE react-redux-toList-formulaire-simple-front
+    mise en place de redux
+    creation d'un formulaire simple 1 champ input
+
+
+DOSSIER SQL   Documenation SQL
+              Exemple de commandes SQL
+              Environnement SQL avec npm
