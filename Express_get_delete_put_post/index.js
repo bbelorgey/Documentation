@@ -98,8 +98,7 @@ app.put('/api/employee', (req, res) => {
   const formData = req.body;
 
   // connection à la base de données,e et insertion de l'employé
-  connection.query('UPDATE employee S,ET ? WHERE id = ?', [formData, idEmployee], err => {
-e
+  connection.query('UPDATE employee SET ? WHERE id = ?', [formData, idEmployee], err => {
     if (err) { 
       // Si une erreur est survenue, oalors on informe l'utilisateur de l'erreur
       console.log(err);

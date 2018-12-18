@@ -3,12 +3,10 @@ import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reac
 import { ToastContainer, ToastStore } from 'react-toasts';
 import { Link } from 'react-router-dom';
 
-class SignUp extends Component {
+class SignIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      lastname: '',
-      name: '',
       password: '',
       passwordConfirm: '',
       email: '',
@@ -45,12 +43,10 @@ class SignUp extends Component {
 
   resetForm() {
     this.setState({
-      lastname: '',
-      name: '',
       password: '',
       passwordConfirm: '',
       email: '',
-      information: '',      
+      information: '',
     });
   }
 
@@ -69,13 +65,14 @@ class SignUp extends Component {
         res => this.setState({ "flash": res.flash }),
         err => this.setState({ "flash": err.flash })
       )
-      .then(err => {ToastStore.error(this.state.flash);
-                    this.resetForm();
-                    })
+      .then(err => {
+        ToastStore.error(this.state.flash);
+        this.resetForm();
+      })
   }
 
   addForm() {
-    const { password, passwordConfirm,flash } = this.state;
+    const { password, passwordConfirm, flash } = this.state;
     if (password !== passwordConfirm) {
       let message = 'Ton password !!! not ok';
       this.setState({
@@ -101,30 +98,8 @@ class SignUp extends Component {
           <Col xs="12" lg="6" className="bg-white border-bottom border-left border-dark rounded-left d-flex  justify-content-center">
             <img className="img-fluid" src="http://images.innoveduc.fr/react_odyssey_homer/wildhomer.png" alt="Card image cap" />
           </Col>
-          <Col  xs="12" lg="6" className="bg-white pt-5 pb-5 border-bottom border-right Larger shadowLarger shadow border-dark rounded-right">
+          <Col xs="12" lg="6" className="bg-white pt-5 pb-5 border-bottom border-right Larger shadowLarger shadow border-dark rounded-right">
             <Form onSubmit={this.submitForm}>
-              <FormGroup className="text-left">
-                <Label className="mb-0" for="lastname">Last name</Label>
-                <Input
-                  className="mt-0 border-top-0 border-right-0 border-left-0"
-                  type="text"
-                  name="lastname"
-                  id="lastname"
-                  placeholder="name"
-                  onChange={this.onChange}
-                  value={this.state.lastname} />
-              </FormGroup>
-              <FormGroup className="text-left">
-                <Label className="mb-0" for="name">Name</Label>
-                <Input
-                  className="mt-0 border-top-0 border-right-0 border-left-0"
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="name"
-                  onChange={this.onChange}
-                  value={this.state.name} />
-              </FormGroup>
               <FormGroup className="text-left">
                 <Label className="mb-0" for="examplePassword">Password</Label>
                 <Input
@@ -161,15 +136,20 @@ class SignUp extends Component {
                   placeholder="Email" />
               </FormGroup>
               <FormGroup className="d-flex justify-content-end pr-2">
-                <Button outline color="primary" type="submit" value="SUBMIT">Submit</Button>
+                <Button
+                  outline
+                  color="primary"
+                  type="submit"
+                  value="SUBMIT">SUBMIT
+                </Button>
               </FormGroup>
             </Form>
             <Button
               outline
               tag={Link}
-              to="/signin"
+              to="/signup"
               color="primary">
-              Sign In
+              signup
             </Button>
             <div id="informatif">
               <ToastContainer store={ToastStore} />
@@ -181,4 +161,4 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default SignIn;

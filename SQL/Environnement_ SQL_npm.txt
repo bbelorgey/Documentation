@@ -3,8 +3,24 @@ sudo /etc/init.d/apache2 restart  //restart apache2
  http://localhost/phpmyadmin  //interface phpmyadmin
  A partir terminal via Lamp : mysql -u root -p donne prompt > mysql
 
+///////creation d'un user 
+create user 'liveco'@'localhost' identified by 'liveco';
+create database name character set utf8 collate utf8_general_ci;
+grant all privileges on name to 'user'@'localhost';
+flush privileges;
+
+// Contraintes TABLES
+ALTER TABLE track ADD CONSTRAINT fk_playlist_id FOREIGN KEY (playlist_id)
+REFERENCES playlist(id);
+
+//// injection d'un fichier sql par terminal
+mysql -uname_user -p name_bdd < fichier.sql
+
 environnement BACK
-npm install express body-parser mysql
+git init
+npm init (si pas react)
+eslint --init (install eslint ou pas)
+npm install --save express body-parser mysql nodemon
 MODIFS sans redemarrer
 npm install nodemon
 

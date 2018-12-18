@@ -1,3 +1,8 @@
+ create user 'liveco'@'localhost' identified by 'liveco';
+create database name character set utf8 collate utf8_general_ci;
+grant all privileges on name to 'user'@'localhost';
+flush privileges;
+
 SELECT * FROM students WHERE IsActive
 
 SELECT MIN(age) age_min, MAX(age) age_max FROM people;
